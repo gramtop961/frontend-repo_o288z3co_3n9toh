@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import { Image as ImageIcon, Upload, X, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Uploader({ onRequireAuth }) {
   const [dragActive, setDragActive] = useState(false);
@@ -41,14 +42,19 @@ export default function Uploader({ onRequireAuth }) {
   };
 
   const handleAnalyze = () => {
-    // For now, prompt auth. Backend wiring can analyze the file after sign-in.
     onRequireAuth?.();
   };
 
   return (
     <section className="relative -mt-24 md:-mt-32">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_10px_60px_-15px_rgba(37,99,235,0.4)]">
+        <motion.div
+          initial={{ opacity: 0, y: 28, rotateX: 6 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_10px_60px_-15px_rgba(37,99,235,0.4)]"
+        >
           <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-indigo-600/20 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-indigo-600/10 blur-3xl" />
 
@@ -115,7 +121,7 @@ export default function Uploader({ onRequireAuth }) {
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
