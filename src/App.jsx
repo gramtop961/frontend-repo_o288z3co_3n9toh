@@ -15,7 +15,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(60%_60%_at_50%_0%,#0b1220_0%,#050810_60%,#02040a_100%)] text-white">
+    <div className="min-h-screen bg-[radial-gradient(60%_60%_at_50%_0%,#0c0714_0%,#0a0612_55%,#07040e_100%)] text-white">
       <Navbar onOpenAuth={openAuth} />
       <main>
         <Hero onGetStarted={() => openAuth('signup')} />

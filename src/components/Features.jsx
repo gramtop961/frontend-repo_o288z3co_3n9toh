@@ -9,10 +9,10 @@ const FeatureCard = ({ icon: Icon, title, desc, index }) => (
     transition={{ duration: 0.5, delay: 0.04 * index, ease: 'easeOut' }}
     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition"
   >
-    <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-indigo-600/10 blur-2xl" />
+    <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br from-pink-500/10 via-fuchsia-500/10 to-purple-600/10 blur-2xl" />
     <div className="flex items-center gap-3">
-      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-indigo-600/20 flex items-center justify-center ring-1 ring-white/20">
-        <Icon className="h-5 w-5 text-cyan-300" />
+      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-pink-500/20 via-fuchsia-500/20 to-purple-600/20 flex items-center justify-center ring-1 ring-white/20">
+        <Icon className="h-5 w-5 text-pink-300" />
       </div>
       <h3 className="font-semibold">{title}</h3>
     </div>
@@ -23,7 +23,7 @@ const FeatureCard = ({ icon: Icon, title, desc, index }) => (
 export default function Features() {
   return (
     <section id="features" className="relative py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(40%_30%_at_50%_0%,rgba(25,113,255,0.18)_0%,rgba(25,113,255,0)_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(40%_30%_at_50%_0%,rgba(244,114,182,0.20)_0%,rgba(217,70,239,0)_70%)]" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function Features() {
             </div>
             <div className="flex gap-3">
               <a href="#" className="px-4 py-2 rounded-lg border border-white/15 bg-white/5 hover:bg-white/10 transition">View sample looks</a>
-              <a href="#pricing" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 hover:from-cyan-300 hover:via-blue-400 hover:to-indigo-500">Pricing</a>
+              <a href="#pricing" className="px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 hover:from-pink-400 hover:via-fuchsia-400 hover:to-purple-500">Pricing</a>
             </div>
           </div>
         </motion.div>

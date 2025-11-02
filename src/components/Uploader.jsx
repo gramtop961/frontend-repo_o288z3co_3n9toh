@@ -53,14 +53,14 @@ export default function Uploader({ onRequireAuth }) {
           whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_10px_60px_-15px_rgba(37,99,235,0.4)]"
+          className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_10px_60px_-15px_rgba(217,70,239,0.45)]"
         >
-          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-indigo-600/20 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-indigo-600/10 blur-3xl" />
+          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-pink-500/20 via-fuchsia-500/20 to-purple-600/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gradient-to-br from-pink-500/10 via-fuchsia-500/10 to-purple-600/10 blur-3xl" />
 
           <div className="relative">
             <div className="flex items-center gap-2 text-sm text-white/80">
-              <Sparkles className="h-4 w-4 text-cyan-300" />
+              <Sparkles className="h-4 w-4 text-pink-300" />
               Try it now — upload a photo to preview AI outfit suggestions
             </div>
 
@@ -69,11 +69,11 @@ export default function Uploader({ onRequireAuth }) {
                 onDrop={onDrop}
                 onDragOver={onDragOver}
                 onDragLeave={onDragLeave}
-                className={`mt-4 grid place-items-center rounded-2xl border-2 border-dashed p-10 transition ${dragActive ? 'border-cyan-400/60 bg-cyan-400/5' : 'border-white/15 bg-white/5 hover:bg-white/10'}`}
+                className={`mt-4 grid place-items-center rounded-2xl border-2 border-dashed p-10 transition ${dragActive ? 'border-pink-400/60 bg-pink-400/5' : 'border-white/15 bg-white/5 hover:bg-white/10'}`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-indigo-600/20 ring-1 ring-white/20">
-                    <ImageIcon className="h-7 w-7 text-cyan-300" />
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/20 via-fuchsia-500/20 to-purple-600/20 ring-1 ring-white/20">
+                    <ImageIcon className="h-7 w-7 text-pink-300" />
                   </div>
                   <h3 className="mt-3 text-lg font-semibold">Drop your image here</h3>
                   <p className="mt-1 text-sm text-white/70">PNG, JPG up to 10MB</p>
@@ -81,7 +81,7 @@ export default function Uploader({ onRequireAuth }) {
                     <button
                       type="button"
                       onClick={() => inputRef.current?.click()}
-                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 px-4 py-2 hover:from-cyan-300 hover:via-blue-400 hover:to-indigo-500"
+                      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 px-4 py-2 hover:from-pink-400 hover:via-fuchsia-400 hover:to-purple-500"
                     >
                       <Upload className="h-4 w-4" /> Choose image
                     </button>
@@ -112,7 +112,7 @@ export default function Uploader({ onRequireAuth }) {
                   <button
                     type="button"
                     onClick={handleAnalyze}
-                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 px-5 py-3 font-medium hover:from-cyan-300 hover:via-blue-400 hover:to-indigo-500"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 px-5 py-3 font-medium hover:from-pink-400 hover:via-fuchsia-400 hover:to-purple-500"
                   >
                     Get outfit suggestions
                   </button>
